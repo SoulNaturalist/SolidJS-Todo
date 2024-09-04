@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Mingzat&display=swap');
+
+
+input {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+button:active {
+  background-color: #555;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+button.default {
+  background-color: inherit;
+  color: inherit;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none;
+  cursor: auto;
+}
+
+div {
+  font-family: "Mingzat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #a0a0a0;
+}
+
+.header {
+  color: #fff;
+  background: #000;
+  padding: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+
+.button-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 0;
+  text-align: center;
+}
