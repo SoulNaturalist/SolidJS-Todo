@@ -43,6 +43,16 @@ function App() {
     saveTasksToLocalStorage();
   };
 
+  const removeTask = (index) => {
+    batch(() => {
+      setTask(tasks => tasks.filter((task, i) => i !== index));
+      if (inputId() === index) {
+        setId(-1);
+      }
+    });
+    saveTasksToLocalStorage();
+  };
+
   return (
     <div>
       <header class='header'>
@@ -62,6 +72,8 @@ function App() {
               <div key={index}  style={{position:"relative", top:"120px"}}>
                 <input value={task[0]} onChange={(e) => changeTaskName(index, e.currentTarget.value)}/> 
                 <button className="buttonInput" onClick={() => changeTaskName(index, task[0])}>Сохранить</button>
+                <button style={{marginLeft:"10px"}} onClick={() => removeTask(index)}>Удалить</button>
+
               </div>:
               <div key={index} style={{position:"relative", top:"120px"}}>
                 <div 
@@ -75,7 +87,6 @@ function App() {
                   </div>
                 </div>
                 <div style={{textAlign:"center", display:"block", margin:"auto", background:"grey", color:"white", cursor:"pointer","border-radius":"5px", padding:"5px"}} onClick={() => setId(index)}>Изменить</div>
-              
               </div>
           ))}
         </>
